@@ -1,0 +1,70 @@
+<template>
+    <div class="wrapper">
+  <div class="item">
+    <div class="item-parent">
+      <p>Parent</p>
+    </div>
+    <div class="item-childrens">
+      <div class="item-child">
+        <div class="item">
+          <div class="item-parent">
+            <p>Parent</p>
+          </div>
+          <div class="item-childrens">
+            <div class="item-child">
+              <div class="item">
+                <div class="item-parent">
+                  <p>Parent</p>
+                </div>
+                <div class="item-childrens">
+                  <div class="item-child">
+                    <p>child 1</p>
+                  </div>
+                  <div class="item-child">
+                    <p>child 2</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-child">
+              <p>child 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-child">
+        <div class="item">
+          <div class="item-parent">
+            <p>Parent</p>
+          </div>
+          <div class="item-childrens">
+            <div class="item-child">
+              <div class="item">
+                <div class="item-parent">
+                  <p>Parent</p>
+                </div>
+                <div class="item-childrens">
+                  <div class="item-child">
+                    <p>child 1</p>
+                  </div>
+                  <div class="item-child">
+                    <p>child 2</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-child">
+              <p>child 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</template>
+<script>
+export default {
+    
+}
+</script>
