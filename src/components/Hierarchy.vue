@@ -1,70 +1,30 @@
 <template>
-    <div class="wrapper">
-  <div class="item">
-    <div class="item-parent">
-      <p>Parent</p>
+<li>
+    <div v-bind:class="{'item': flag, 'd-none': !flag}">
+      <a class="anchor" href="javascript:void(0)" @click="showModal = true">{{item.name}}</a>
     </div>
-    <div class="item-childrens">
-      <div class="item-child">
-        <div class="item">
-          <div class="item-parent">
-            <p>Parent</p>
-          </div>
-          <div class="item-childrens">
-            <div class="item-child">
-              <div class="item">
-                <div class="item-parent">
-                  <p>Parent</p>
-                </div>
-                <div class="item-childrens">
-                  <div class="item-child">
-                    <p>child 1</p>
-                  </div>
-                  <div class="item-child">
-                    <p>child 2</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item-child">
-              <p>child 2</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item-child">
-        <div class="item">
-          <div class="item-parent">
-            <p>Parent</p>
-          </div>
-          <div class="item-childrens">
-            <div class="item-child">
-              <div class="item">
-                <div class="item-parent">
-                  <p>Parent</p>
-                </div>
-                <div class="item-childrens">
-                  <div class="item-child">
-                    <p>child 1</p>
-                  </div>
-                  <div class="item-child">
-                    <p>child 2</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item-child">
-              <p>child 2</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <ul>
+      <Hierarchy v-for="(hierarchy,index) in item.children" :key="index" :item="hierarchy" :flag="true"></Hierarchy>
+    </ul>
+    <HierarchyDetail v-if="showModal" @close="showModal = false" :item="item"/>
+  </li>
 </template>
-<script>
-export default {
-    
-}
+<script lang="ts">
+import Vue from 'vue';
+import HierarchyDetail from './HierarchyDetail';
+export default Vue.extend({
+    props:{
+        item: Object,
+        flag:Boolean
+     },
+    data() {
+        return {
+          showModal: false
+        }
+      },
+     components:{
+        HierarchyDetail
+     },
+     name:'Hierarchy'
+});
 </script>
