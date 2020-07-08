@@ -3,11 +3,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Hierarchy = new Schema({
-  title: {
-    type: String
-  },
-  body: {
-    type: String
+  data: {
+    type: Object
   }
 },{
     collection: 'hierarchies'

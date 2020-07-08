@@ -1,24 +1,25 @@
 # hierarchy
 
-## Project setup
+## Project setup Frontend
 ```
-npm install
+npm install 
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development of Front end
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Project setup Backend
 ```
-npm run build
+cd api
+npm install
 ```
-
-### Lints and fixes files
+### load data to mongoDB 
 ```
-npm run lint
+npm run migrate
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Compiles and hot-reloads for development of  Backend
+```
+npm run serve
+```
