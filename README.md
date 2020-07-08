@@ -1,5 +1,10 @@
 # hierarchy
 
+## prerequisites to Start
+```
+nodejs version > 10
+```
+
 ## Project setup Frontend
 ```
 npm install 
